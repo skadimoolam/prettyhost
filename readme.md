@@ -6,7 +6,7 @@ PrettyHost is a simple alternate to the default wamp / xampp pages.
 This is built with VueJs, this is a very simple app, open the source and play around with it.
 
 ## Demo Image
-![PrettyHost demo image](./demo.png)
+![PrettyHost demo image](./demo-image.png)
 
 ## Instruction
 - Download [this zip](https://github.com/skadimoolam/prettyhost/archive/master.zip) file.
