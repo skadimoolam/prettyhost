@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>PrettyHost</title>
+
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="libs/vue/vue.min.js"></script>
+	<script type="text/javascript" src="libs/vue/vue-resource.min.js"></script>
+</head>
+<body>
+
+	<div class="container-fluid" id="app">
+		<h2>
+			Directory List
+			<span class="pull-right">
+				<a href="../phpmyadmin" target="_blank" class="btn btn-default">phpMyAdmin</a>
+			</span>
+		</h2>
+
+		<br>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-8 col-md-8">
+				<input type="text" class="form-control" placeholder="Search Here" v-model="q" autofocus>
+			</div>
+		</div>
+		
+		<br>
+		<br>
+		<div class="col-sm-offset-2 col-sm-8 col-md-8">
+			<ul class="list-group">
+				<a class="list-group-item" target="_blank" v-for="dir in dirList | filterBy q | orderBy dir" v-bind:href="'http://localhost/' + dir" v-if="dir.indexOf('.') == -1">{{ dir }}</a>
+			</ul>
+		</div>
+
+	</div>
+
+<script type="text/javascript">
+"use strict";
+
+
+new Vue({
+	el: '#app',
+
+	data: {
+		dirList: []
+	},
+
+	created: function() {
+		this.$http.get('./get_root_dir.php').then(function(res) {
+			console.log(JSON.parse(res.body));
+			this.dirList = JSON.parse(res.body);
+		});
+	}
+});
+</script>
+</body>
+</html>
