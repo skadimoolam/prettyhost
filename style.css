@@ -1,0 +1,88 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container-fluid {
+	padding: 16px;
+}
+
+.page-title {
+	font-family: Verdana;
+	font-size: 24px;
+}
+
+.pull-right {
+	float: right; 
+}
+
+.btn {
+	font-size: 14px;
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #ccc;
+	max-height: 32px;
+	height: 32px;
+	padding: 8px 16px;
+	border-radius: 5px;
+	font-weight: 300;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.inner-app {
+	width: 66%;
+	margin: auto;
+}
+
+.form-control {
+	box-sizing: border-box;
+	width: 100%;
+	height: 32px;
+	max-height: 32px;
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0px 8px;
+}
+
+.list-group {
+	width: 100%;
+}
+
+.list-group :first-child {
+	border-top: 1px solid #ccc;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.list-group :last-child {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.list-group-item {
+	box-sizing: border-box;
+	font-family: Verdana;
+	width: 100%;
+	display: block;
+	height: 32px;
+	max-height: 32px;
+	line-height: 32px;
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #ccc;
+	border-top: none;
+	vertical-align: middle;
+	text-decoration: none;
+	padding: 0px 8px;
+}
+
+.list-group-item:hover {
+	background-color: #f3f3f3;
+}
